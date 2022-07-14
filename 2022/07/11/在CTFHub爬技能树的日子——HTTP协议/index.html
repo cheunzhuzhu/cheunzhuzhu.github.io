@@ -23,7 +23,7 @@
 <meta property="og:description" content="第一题、请求方法题目：HTTP请求方法，HTTP&#x2F;1.1协议中共定义了八种方法（也叫动作）来以不同的方式操作指定资源。 WP： 直接复制index.php网址到liunx终端 输入命令  curl -v -X CTFHUB http:&#x2F;&#x2F;challenge-c2b2a7650fa9af13.sandbox.ctfhub.com:10800&#x2F;index.php 取到源码，找到ctfhub{flag}">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-07-11T05:31:33.000Z">
-<meta property="article:modified_time" content="2022-07-11T06:01:17.390Z">
+<meta property="article:modified_time" content="2022-07-12T06:18:37.397Z">
 <meta property="article:author" content="超爱吃蛋炒饭">
 <meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary">
@@ -301,6 +301,8 @@
 <p>本题考点：Cookie欺骗、认证、伪造</p>
 </blockquote>
 <p>解题思路：挂上BurpSuite之后访问题目页面在‘代理-HTTP历史’里可以看到两个GET请求</p>
+<h2 id="第四题、基础认证"><a href="#第四题、基础认证" class="headerlink" title="第四题、基础认证"></a>第四题、基础认证</h2><p>题目： 在HTTP中，基础认证是允许http用户代理（如网页浏览器）在请求时，提供用户名和密码的一种方式。详细请查看 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/HTTP%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%81">https://zh.wikipedia.org/wiki/HTTP基础认证</a></p>
+<p>WP：</p>
 
       
     </div>
@@ -312,7 +314,7 @@
         <p><span>本文标题:</span><a href="/2022/07/11/%E5%9C%A8CTFHub%E7%88%AC%E6%8A%80%E8%83%BD%E6%A0%91%E7%9A%84%E6%97%A5%E5%AD%90%E2%80%94%E2%80%94HTTP%E5%8D%8F%E8%AE%AE/">在CTFHub爬技能树的日子——HTTP协议</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">超爱吃蛋炒饭</a></p>
         <p><span>发布时间:</span>2022-07-11, 13:31:33</p>
-        <p><span>最后更新:</span>2022-07-11, 14:01:17</p>
+        <p><span>最后更新:</span>2022-07-12, 14:18:37</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2022/07/11/%E5%9C%A8CTFHub%E7%88%AC%E6%8A%80%E8%83%BD%E6%A0%91%E7%9A%84%E6%97%A5%E5%AD%90%E2%80%94%E2%80%94HTTP%E5%8D%8F%E8%AE%AE/" title="在CTFHub爬技能树的日子——HTTP协议">http://example.com/2022/07/11/%E5%9C%A8CTFHub%E7%88%AC%E6%8A%80%E8%83%BD%E6%A0%91%E7%9A%84%E6%97%A5%E5%AD%90%E2%80%94%E2%80%94HTTP%E5%8D%8F%E8%AE%AE/</a>
             <span class="copy-path" data-clipboard-text="原文: http://example.com/2022/07/11/%E5%9C%A8CTFHub%E7%88%AC%E6%8A%80%E8%83%BD%E6%A0%91%E7%9A%84%E6%97%A5%E5%AD%90%E2%80%94%E2%80%94HTTP%E5%8D%8F%E8%AE%AE/　　作者: 超爱吃蛋炒饭" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -342,7 +344,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98%E3%80%81%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">第一题、请求方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%A2%98%E3%80%81302%E8%B7%B3%E8%BD%AC"><span class="toc-number">2.</span> <span class="toc-text">第二题、302跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%A2%98%E3%80%81Cookie"><span class="toc-number">3.</span> <span class="toc-text">第三题、Cookie</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98%E3%80%81%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">第一题、请求方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%A2%98%E3%80%81302%E8%B7%B3%E8%BD%AC"><span class="toc-number">2.</span> <span class="toc-text">第二题、302跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%A2%98%E3%80%81Cookie"><span class="toc-number">3.</span> <span class="toc-text">第三题、Cookie</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%A2%98%E3%80%81%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text">第四题、基础认证</span></a></li></ol>
         
     </div>
     <style>

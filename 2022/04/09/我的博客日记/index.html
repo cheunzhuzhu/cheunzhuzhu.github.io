@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="超爱吃蛋炒饭" />
+
+
+
+<meta name="description" content="今天终于完成了我的博客模板的基本排版，接下来就给大伙分享一下我搭建博客的时候遇到的一些问题吧。 博客搭建今天终于完成了我的博客模板的基本排版，接下来就给大伙分享一下的搭建博客的时候遇到的一些问题吧。 1、准备个人博客需要的工具安装：Git Git是用来创建博客文档、上传到Github、安装插件都需要的工具。 安装：Node.js 安装Node.js完成后，打开git-hash.exe输入: $ n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的博客日记">
+<meta property="og:url" content="http://example.com/2022/04/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/index.html">
+<meta property="og:site_name" content="欢迎来到蛋炒饭的博客">
+<meta property="og:description" content="今天终于完成了我的博客模板的基本排版，接下来就给大伙分享一下我搭建博客的时候遇到的一些问题吧。 博客搭建今天终于完成了我的博客模板的基本排版，接下来就给大伙分享一下的搭建博客的时候遇到的一些问题吧。 1、准备个人博客需要的工具安装：Git Git是用来创建博客文档、上传到Github、安装插件都需要的工具。 安装：Node.js 安装Node.js完成后，打开git-hash.exe输入: $ n">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-04-09T11:37:42.000Z">
+<meta property="article:modified_time" content="2022-04-11T06:06:13.296Z">
+<meta property="article:author" content="超爱吃蛋炒饭">
+<meta property="article:tag" content="日常">
+<meta name="twitter:card" content="summary">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="欢迎来到蛋炒饭的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/img/tubiao.jpg">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>我的博客日记 | 欢迎来到蛋炒饭的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/touxiang.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">超爱吃蛋炒饭</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+	
+                   
+
+		<nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa CSDN" target="_blank" rel="noopener" href="https://blog.csdn.net/m0_68353461?spm=1000.2115.3001.5343" title="CSDN"></a>
+                            
+                        </ul>
+                         <div style="position:absolute;">
+	                    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="//music.163.com/outchain/player?type=2&id=65536&auto=0&height=66"></iframe>
+	              </div>
+                    </nav>
+                </section>
+                
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱吃炒饭</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">超爱吃蛋炒饭</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/touxiang.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">超爱吃蛋炒饭</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa CSDN" target="_blank" href="https://blog.csdn.net/m0_68353461?spm=1000.2115.3001.5343" title="CSDN"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-我的博客日记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/04/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/" class="article-date">
+      <time datetime="2022-04-09T11:37:42.000Z" itemprop="datePublished">2022-04-09</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      我的博客日记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+        
+<div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>今天终于完成了我的博客模板的基本排版，接下来就给大伙分享一下我搭建博客的时候遇到的一些问题吧。</p>
+<h1 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h1><p>今天终于完成了我的博客模板的基本排版，接下来就给大伙分享一下的搭建博客的时候遇到的一些问题吧。</p>
+<h2 id="1、准备个人博客需要的工具"><a href="#1、准备个人博客需要的工具" class="headerlink" title="1、准备个人博客需要的工具"></a>1、准备个人博客需要的工具</h2><p><strong>安装：<a target="_blank" rel="noopener" href="https://gitforwindows.org/">Git</a></strong></p>
+<p>Git是用来创建博客文档、上传到Github、安装插件都需要的工具。</p>
+<p><strong>安装：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Node.js</a></strong></p>
+<p>安装Node.js完成后，打开git-hash.exe输入:</p>
+<p><code>$ node -v &amp;&amp; npm -v</code></p>
+<p>检测是否安装成功（显示其版本号）如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node -v &amp;&amp; npm -v</span><br><span class="line">v16.14.2</span><br><span class="line">8.5.0</span><br></pre></td></tr></table></figure>
+
+<p>如果没有显示版本号就是安装失败就再安装一次。</p>
+<h2 id="2、如何创建一个个人博客"><a href="#2、如何创建一个个人博客" class="headerlink" title="2、如何创建一个个人博客"></a>2、如何创建一个个人博客</h2><p><strong>安装Hexo</strong></p>
+<p>打开git-bash.exe创建一个文件夹:</p>
+<p><code>$ mkdir blog</code></p>
+<p>进入文件夹:</p>
+<p><code>$ cd blog</code></p>
+<p>安装hexo-cli插件:</p>
+<p><code>$ npm install -g hexo-cli</code></p>
+<p>查看版本:</p>
+<p><code>$hexo -v</code></p>
+<p>初始化hexo</p>
+<p><code>$ hexo init myblog</code> </p>
+<p>进入myblog</p>
+<p><code>$ cd myblog</code></p>
+<p><code>$ npm install</code></p>
+<p>新建完成后在myblog目录下打开git-bash.exe输入 ls </p>
+<p>会显示node_modules、public、scaffolds、source、themes、_config.yml 6个文件夹，没有出现的话就是出错了，建议重新再创</p>
+<p>在myblog目录下打开git-bash.exe</p>
+<p><code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code></p>
+<p>清理hexo缓存，更新上传，创建本地hexo服务</p>
+<p>然后在浏览器地址栏输入：localhost:4000 就可以看到刚刚新建的博客了，不过只能让自己看见</p>
+<h2 id="3、如何创建一个大家都可以看见的博客"><a href="#3、如何创建一个大家都可以看见的博客" class="headerlink" title="3、如何创建一个大家都可以看见的博客"></a>3、如何创建一个大家都可以看见的博客</h2><p>只有自己能看见自己的博客是不是感觉到很没意思，那就开始搭建一个大家都能看见的博客吧</p>
+<p><strong>创建Github个人仓库</strong></p>
+<p>首先第一步是拥有一个<a target="_blank" rel="noopener" href="https://github.com/">Github</a>的账户</p>
+<p>登录Github新建仓库（必须要和用户名一样不然后面容易出现问题）</p>
+<p><strong>生成SSH密钥添加到Github</strong></p>
+<p>在git-bash中输入</p>
+<p>绑定Github</p>
+<p><code>$ git config --global user.name &quot;Github的用户名&quot;</code></p>
+<p><code>$ git config --global user.email &quot;Github注册输入的邮箱&quot;</code></p>
+<p>创建SSH密钥</p>
+<p><code>$ ssh-keygen -t rsa -C &quot;Github注册的输入的邮箱&quot;</code></p>
+<p>然后就会在C://用户/用户名 下生成一个.ssh文件夹，打开文件夹里的id_rsa.pub文件，里面就是你的公共密钥（如果找不到pub文件可以试试打开拓展名，反正我没打开的时候找不到/(ㄒoㄒ)/~~）</p>
+<p>返回Github的setting中，找到SSH keys设置，点击New SSH key，把你的公共密钥复制进去。</p>
+<p>返回git-bash </p>
+<p><code>$ ssh -T git@github.com</code></p>
+<p>修改站点的配置文件_config.yml</p>
+<p>在配置文件的最底下输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: https://github.com/你的github用户名/你的github用户名.github.io.git</span><br><span class="line">brach: master</span><br></pre></td></tr></table></figure>
+
+<p>注: yml配置文件的格式要求特别养个，所以格式一定要对常见的就会有：后面没有加一个空格导致报错，所以还是不要瞎捣鼓，报错了就麻烦了，我都被烦死了/(ㄒoㄒ)/~~</p>
+<p><strong>安装deploy-git</strong></p>
+<p><code>$ npm install hexo-deployer-git --save</code></p>
+<p>清理缓存、更新文件、上传部署文件</p>
+<p><code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+<p>这样就完成了把你的博客部署到Github服务器上了</p>
+<p>在浏览器地址栏输入 http://你的Git用户名.github.io就可以看到你的博客咯</p>
+<h2 id="4、个人域名"><a href="#4、个人域名" class="headerlink" title="4、个人域名"></a>4、个人域名</h2><p>觉得你现在的网站太难记了怎么办，当然是设置一个个人域名啦！</p>
+<p>可以选择阿里云或者是腾讯云之类的买个自定义域名</p>
+<p>购买成功后</p>
+<p>点击你的域名-全部域名-解析-添加记录</p>
+<p>记录类型：CNAME</p>
+<p>主机记录：@</p>
+<p>解析线路：默认</p>
+<p>记录值：yourname.github.io</p>
+<p>确认</p>
+<p>在添加一条把 @ 改成 www</p>
+<p>然后在Github选择刚刚创建的仓库-settings-pages设置Custom domain输入你购买的域名</p>
+<p>然后！！然后！在你blog文件中的source新建一个名为CNAME的文件，记得删掉后缀，在文件里面写上你刚买的域名</p>
+<p>最后</p>
+<p><code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+<p>然后就可以在浏览器输入你自己购买的域名看到你的博客啦</p>
+<p>然后就可以开始写文章，在git-bash中输入</p>
+<p><code>$ hexo new 文章标题</code></p>
+<p>会在source/_post文件中生成一个后缀是.md的文件，这个时候你就可以使用Typora编辑器编辑了（当然记事本也可以，只是Typora比较的方便)</p>
+<p>写完后千万不要忘记更新部署</p>
+<p><code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+<p>有时候会出现hexo d传不上去的情况，可能是网络不好，Ctrl+C退出在输入多几次就行了</p>
+<p>或者是</p>
+<p>$ <code>rm -rf .deploy_git </code>和 <code>$ git config --global core.autocrlf false</code></p>
+<p>之后再<code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+<p>hexo的基本配置都是在_config.yml中更改</p>
+<p>好了就是这样的，我能成功安装博客还离不开<a target="_blank" rel="noopener" href="https://jjjjy.icu/">大佬</a>的帮助.</p>
+<h1 id="更改hexo主题"><a href="#更改hexo主题" class="headerlink" title="更改hexo主题"></a>更改hexo主题</h1><p>是不是觉得hexo自带的主题不好看，想自定义主题，可以去网上找hexo博客主题然后安装他</p>
+<p>由于我使用的<a target="_blank" rel="noopener" href="https://github.com/MOxFIVE/hexo-theme-yelee">yelee</a>的主题，所以就用这个主题演示一下安装和遇到的一些问题</p>
+<p>刚开始安装主题的时候发现主题自带有说明只需要在git-bash里输入</p>
+<p><code>$ git clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee</code></p>
+<p>但是我发现emmmm，不行众所周知GitHub是国外的网站，访问他有点点的复杂（就是科学上网）所以我选择的是直接下载压缩包</p>
+<p>步骤就是点击网址里的Code在下拉菜单的最后一个就是下载压缩包Download ZIP，然后解压文件夹里的yelee文件夹到myublog的themes文件夹里就行了。</p>
+<h2 id="1-布置标签云"><a href="#1-布置标签云" class="headerlink" title="1.布置标签云"></a>1.布置标签云</h2><p><code>$ hexo new page tags</code></p>
+<h2 id="2-关于我"><a href="#2-关于我" class="headerlink" title="2.关于我"></a>2.关于我</h2><p><code>$ hexo new page about</code></p>
+<h2 id="3-自定义配置"><a href="#3-自定义配置" class="headerlink" title="3.自定义配置"></a>3.自定义配置</h2><p>自定义配置在yelee文件夹里的_config.yml修改，和上面一样yml文件对格式相当严格，要保持和默认一致</p>
+<p>然后更着提示的中文自己自定义内容就可以了（注：作者没有把author输进去，记得自己打一个author跟在头像地址的下面）</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2022/04/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/">我的博客日记</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">超爱吃蛋炒饭</a></p>
+        <p><span>发布时间:</span>2022-04-09, 19:37:42</p>
+        <p><span>最后更新:</span>2022-04-11, 14:06:13</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2022/04/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/" title="我的博客日记">http://example.com/2022/04/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://example.com/2022/04/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/　　作者: 超爱吃蛋炒饭" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2022/05/05/Liunx%E5%AE%89%E8%A3%85/">
+                    Liunx安装
+                </a>
+            </div>
+        
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">博客搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%87%86%E5%A4%87%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%9C%80%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="toc-number">1.1.</span> <span class="toc-text">1、准备个人博客需要的工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.2.</span> <span class="toc-text">2、如何创建一个个人博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%A4%A7%E5%AE%B6%E9%83%BD%E5%8F%AF%E4%BB%A5%E7%9C%8B%E8%A7%81%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.3.</span> <span class="toc-text">3、如何创建一个大家都可以看见的博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D"><span class="toc-number">1.4.</span> <span class="toc-text">4、个人域名</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9hexo%E4%B8%BB%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">更改hexo主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B8%83%E7%BD%AE%E6%A0%87%E7%AD%BE%E4%BA%91"><span class="toc-number">2.1.</span> <span class="toc-text">1.布置标签云</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%85%B3%E4%BA%8E%E6%88%91"><span class="toc-number">2.2.</span> <span class="toc-text">2.关于我</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE"><span class="toc-number">2.3.</span> <span class="toc-text">3.自定义配置</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2022/05/05/Liunx%E5%AE%89%E8%A3%85/" title="上一篇: Liunx安装">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/01/11/Mysql/">Mysql基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/02/%E5%88%B7%E6%96%B0%E8%BF%87%E7%9A%84%E5%9B%BE%E7%89%87/">刷新过的图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/02/%E6%94%BE%E6%9D%BE%E4%B8%80%E4%B8%8B%E5%90%A7/">放松一下吧</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/01/look/">look</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/01/split-all/">split_all</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/01/%E7%99%BD%E5%93%A5%E7%9A%84%E9%B8%BD%E5%AD%90/">白哥的鸽子</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/01/come-game/">come_game</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/01/%E9%97%AA%E7%9A%84%E5%A5%BD%E5%BF%AB/">闪的好快</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/30/%E9%9A%90%E5%86%992/">隐写2</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/30/%E5%AE%BD%E5%B8%A6%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/">宽带信息泄露</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/30/%E5%8F%88%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%EF%BC%8C%E8%BF%98%E6%B7%A1%E6%9D%91%E5%90%97/">又一张图片，还单纯吗</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/30/%E5%85%A5%E9%97%A8%E9%80%86%E5%90%91/">入门逆向</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/29/%E7%95%AA%E5%A4%96%E7%AF%87/">where is flag 番外篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/29/%E8%B4%9D%E6%96%AF%E6%89%8B/">贝斯手</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/29/%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B/">赛博朋克</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/29/ping/">ping</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/29/%E5%95%8A%E5%93%92/">啊哒</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/28/%E7%9C%BC%E8%A7%81%E9%9D%9E%E5%AE%9E/">眼见非实</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/28/telnet/">telnet</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/28/%E8%BF%99%E6%98%AF%E4%B8%80%E5%BC%A0%E5%8D%95%E7%BA%AF%E7%9A%84%E5%9B%BE%E7%89%87/">这是一张单纯的图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/28/1%E5%92%8C0%E7%9A%84%E6%95%85%E4%BA%8B/">1和0的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/16/sqli/">sql注入（sqli）</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/14/upload-list/">upload-labs靶场通关</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/14/%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/">靶场搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/08/%E9%85%8D%E7%BD%AE%E6%BA%90%E5%92%8C%E5%AE%89%E8%A3%85docker%E5%AE%B9%E5%99%A8/">Ubuntu配置源和安装docker容器</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/09/19/%E6%B5%99%E6%B1%9F%E7%9C%81%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9Bmisc/">浙江省第五届网络安全竞赛misc</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/16/Liunx%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/">Liunx用户权限相关命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/06/Liunx%E5%9F%BA%E7%A1%80%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/">Liunx基础终端命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/06/Liunx%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%91%BD%E4%BB%A4/">Liunx远程控制命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/05/Liunx%E5%AE%89%E8%A3%85/">Liunx安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/04/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/">我的博客日记</a></li></ul>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2022-2023 超爱吃蛋炒饭
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

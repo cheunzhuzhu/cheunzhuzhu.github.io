@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="超爱吃蛋炒饭" />
+
+
+
+<meta name="description" content="Liunx的安装安装Liunx首先要先下载Liunx的镜像文件 ，要选择自己合适的镜像文件和虚拟机 安装完虚拟机之后打开虚拟机选择新建虚拟机如果下载的是虚拟机包可以直接打开虚拟机  选择自定义，点击下一步，然后继续下一步 选择安装册灰姑娘徐光盘映像文件（iso）&gt; 点击浏览找到下载的iso文件 &gt; 点击下一步 选择Liunx &gt; 根据自己下载的镜像版本安装 这里我使用的CentO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Liunx安装">
+<meta property="og:url" content="http://example.com/2022/05/05/Liunx%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:site_name" content="欢迎来到蛋炒饭的博客">
+<meta property="og:description" content="Liunx的安装安装Liunx首先要先下载Liunx的镜像文件 ，要选择自己合适的镜像文件和虚拟机 安装完虚拟机之后打开虚拟机选择新建虚拟机如果下载的是虚拟机包可以直接打开虚拟机  选择自定义，点击下一步，然后继续下一步 选择安装册灰姑娘徐光盘映像文件（iso）&gt; 点击浏览找到下载的iso文件 &gt; 点击下一步 选择Liunx &gt; 根据自己下载的镜像版本安装 这里我使用的CentO">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/2022/05/05/Liunx%E5%AE%89%E8%A3%85/Users/23770/bolg/myblog/themes/yelee/source/img/虚拟机1.png">
+<meta property="article:published_time" content="2022-05-05T10:18:21.000Z">
+<meta property="article:modified_time" content="2022-05-06T03:25:17.174Z">
+<meta property="article:author" content="超爱吃蛋炒饭">
+<meta property="article:tag" content="Liunx">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/05/05/Liunx%E5%AE%89%E8%A3%85/Users/23770/bolg/myblog/themes/yelee/source/img/虚拟机1.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="欢迎来到蛋炒饭的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/img/tubiao.jpg">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Liunx安装 | 欢迎来到蛋炒饭的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/touxiang.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">超爱吃蛋炒饭</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+	
+                   
+
+		<nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa CSDN" target="_blank" rel="noopener" href="https://blog.csdn.net/m0_68353461?spm=1000.2115.3001.5343" title="CSDN"></a>
+                            
+                        </ul>
+                         <div style="position:absolute;">
+	                    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="//music.163.com/outchain/player?type=2&id=65536&auto=0&height=66"></iframe>
+	              </div>
+                    </nav>
+                </section>
+                
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱吃炒饭</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">超爱吃蛋炒饭</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/touxiang.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">超爱吃蛋炒饭</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa CSDN" target="_blank" href="https://blog.csdn.net/m0_68353461?spm=1000.2115.3001.5343" title="CSDN"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-Liunx安装" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/05/05/Liunx%E5%AE%89%E8%A3%85/" class="article-date">
+      <time datetime="2022-05-05T10:18:21.000Z" itemprop="datePublished">2022-05-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Liunx安装
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Liunx/" rel="tag">Liunx</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+        
+<div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Liunx的安装"><a href="#Liunx的安装" class="headerlink" title="Liunx的安装"></a>Liunx的安装</h1><h2 id="安装Liunx"><a href="#安装Liunx" class="headerlink" title="安装Liunx"></a>安装Liunx</h2><p>首先要先下载<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/centos/7.9.2009/isos/x86_64/">Liunx的镜像文件 </a>，要选择自己合适的镜像文件和<a target="_blank" rel="noopener" href="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html">虚拟机</a></p>
+<p>安装完虚拟机之后打开虚拟机选择<strong>新建虚拟机</strong>如果下载的是虚拟机包可以直接打开虚拟机</p>
+<p><img src="/2022/05/05/Liunx%E5%AE%89%E8%A3%85/Users\23770\bolg\myblog\themes\yelee\source\img\虚拟机1.png"></p>
+<p>选择自定义，点击下一步，然后继续下一步</p>
+<p>选择安装册灰姑娘徐光盘映像文件（iso）&gt; 点击浏览找到下载的iso文件 &gt; 点击下一步</p>
+<p>选择Liunx &gt; 根据自己下载的镜像版本安装 这里我使用的CentOS 7 64 的镜像 &gt; 下一步</p>
+<p>然后给虚拟机安装位置和虚拟机名称，自己设置就不放图了 &gt; 下一步</p>
+<p>这里处理器内核随便设置一下都可以 &gt; 下一步</p>
+<p>设置内存大小更具自己的电脑配置来设置就好了，我设置的16GB &gt; 下一步</p>
+<p>1.桥接模式: 虚拟机ip地址需要与主机在同一个网段，如果需要联网，则网关与DNS需要与主机网卡一致。</p>
+<p>2.NAT模式: 虚拟系统借助NAT(网络地址转换)功能，通过宿主机器所在的网络来访问公网。也就是说，使用NAT模式可以实现在虚拟系统里访问互联网。</p>
+<p>这里我选择的是NAT &gt; 下一步</p>
+<p>然后 <strong>下一步</strong> 到底</p>
+<p>在虚拟机设置界面设置一下iso</p>
+<p>安装完成后启动虚拟机</p>
+<p>在这个界面按一下方向键的 ↑ 然后回车确认</p>
+<p>等待一会就会进入</p>
+<p>选择语言（汉语在最底下） continue是确认 quit是上一步</p>
+<p>在这里面可以安装可视化界面，因为我要创建的是命令行所以就不演示了</p>
+<p>设置root密码 user用户可以先不创建，命令行的话也不需要，图形界面进去的时候会提示你拆功创建按照他的一步步创建就好了</p>
+<p>等待安装完成…</p>
+<p>安装完成后会提示重启（reboot）</p>
+<p>重启之后就安装完成了，命令行只需需要输入root/用户和密码就行了，如果是图像界面还会需要创建用户</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2022/05/05/Liunx%E5%AE%89%E8%A3%85/">Liunx安装</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">超爱吃蛋炒饭</a></p>
+        <p><span>发布时间:</span>2022-05-05, 18:18:21</p>
+        <p><span>最后更新:</span>2022-05-06, 11:25:17</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2022/05/05/Liunx%E5%AE%89%E8%A3%85/" title="Liunx安装">http://example.com/2022/05/05/Liunx%E5%AE%89%E8%A3%85/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://example.com/2022/05/05/Liunx%E5%AE%89%E8%A3%85/　　作者: 超爱吃蛋炒饭" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2022/05/06/Liunx%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%91%BD%E4%BB%A4/">
+                    Liunx远程控制命令
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2022/04/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/">
+                    我的博客日记
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Liunx%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">Liunx的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Liunx"><span class="toc-number">1.1.</span> <span class="toc-text">安装Liunx</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2022/05/06/Liunx%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%91%BD%E4%BB%A4/" title="上一篇: Liunx远程控制命令">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2022/04/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/" title="下一篇: 我的博客日记">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/01/11/Mysql/">Mysql基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/02/%E5%88%B7%E6%96%B0%E8%BF%87%E7%9A%84%E5%9B%BE%E7%89%87/">刷新过的图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/02/%E6%94%BE%E6%9D%BE%E4%B8%80%E4%B8%8B%E5%90%A7/">放松一下吧</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/01/look/">look</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/01/split-all/">split_all</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/01/%E7%99%BD%E5%93%A5%E7%9A%84%E9%B8%BD%E5%AD%90/">白哥的鸽子</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/01/come-game/">come_game</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/01/%E9%97%AA%E7%9A%84%E5%A5%BD%E5%BF%AB/">闪的好快</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/30/%E9%9A%90%E5%86%992/">隐写2</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/30/%E5%AE%BD%E5%B8%A6%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/">宽带信息泄露</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/30/%E5%8F%88%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%EF%BC%8C%E8%BF%98%E6%B7%A1%E6%9D%91%E5%90%97/">又一张图片，还单纯吗</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/30/%E5%85%A5%E9%97%A8%E9%80%86%E5%90%91/">入门逆向</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/29/%E7%95%AA%E5%A4%96%E7%AF%87/">where is flag 番外篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/29/%E8%B4%9D%E6%96%AF%E6%89%8B/">贝斯手</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/29/%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B/">赛博朋克</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/29/ping/">ping</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/29/%E5%95%8A%E5%93%92/">啊哒</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/28/%E7%9C%BC%E8%A7%81%E9%9D%9E%E5%AE%9E/">眼见非实</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/28/telnet/">telnet</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/28/%E8%BF%99%E6%98%AF%E4%B8%80%E5%BC%A0%E5%8D%95%E7%BA%AF%E7%9A%84%E5%9B%BE%E7%89%87/">这是一张单纯的图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/28/1%E5%92%8C0%E7%9A%84%E6%95%85%E4%BA%8B/">1和0的故事</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/16/sqli/">sql注入（sqli）</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/14/upload-list/">upload-labs靶场通关</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/14/%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/">靶场搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/11/08/%E9%85%8D%E7%BD%AE%E6%BA%90%E5%92%8C%E5%AE%89%E8%A3%85docker%E5%AE%B9%E5%99%A8/">Ubuntu配置源和安装docker容器</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/09/19/%E6%B5%99%E6%B1%9F%E7%9C%81%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9Bmisc/">浙江省第五届网络安全竞赛misc</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/16/Liunx%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/">Liunx用户权限相关命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/06/Liunx%E5%9F%BA%E7%A1%80%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/">Liunx基础终端命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/06/Liunx%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%91%BD%E4%BB%A4/">Liunx远程控制命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/05/Liunx%E5%AE%89%E8%A3%85/">Liunx安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/04/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%97%A5%E8%AE%B0/">我的博客日记</a></li></ul>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2022-2023 超爱吃蛋炒饭
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

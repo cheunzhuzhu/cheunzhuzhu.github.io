@@ -476,6 +476,63 @@
 <p>另一个连接语句格式是使用JOIN ON语法，刚才的语法等同于：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT [字段]</span><br><span class="line"></span><br><span class="line">FROM [表1] JOIN [表2]</span><br><span class="line"></span><br><span class="line">ON [表1.字段] = [表2.字段]；</span><br></pre></td></tr></table></figure>
 
+<h2 id="四、数据库及表的修改和删除"><a href="#四、数据库及表的修改和删除" class="headerlink" title="四、数据库及表的修改和删除"></a>四、数据库及表的修改和删除</h2><h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><p>在此之前需要先新建一个数据库帮助实验<code>CREATE DATABASE test_1;</code>，使用命令 <code>SHOW DATABASS；</code>可以看到刚才新建的数据库。</p>
+<p><img src="/2023/01/11/Mysql/19.png"></p>
+<p>然后再删除刚才新建的test_1数据库使用命令 <code>DROP DATABASE [库名];</code></p>
+<p><img src="/2023/01/11/Mysql/20.png"></p>
+<blockquote>
+<p>目前Mysql没有提供修改数据库名称的方法，因为这曾导致一系列的安全问题。</p>
+<p>再老版本中RENAME DATABASE可以修改数据库名称，这条命令再MySQL5.1.7中被加入，但官方发现这命令的危险，于是再MySQL5.1.23中移除</p>
+</blockquote>
+<h3 id="对一张表的修改"><a href="#对一张表的修改" class="headerlink" title="对一张表的修改"></a>对一张表的修改</h3><h4 id="重命名一张表"><a href="#重命名一张表" class="headerlink" title="重命名一张表"></a>重命名一张表</h4><p>重命名一张表的语句有多种,以下三种效果一致</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">RENAME TABLE 原名 TO 新名;</span><br><span class="line"></span><br><span class="line">ALTER TABLE 原名 RENAME 新名;</span><br><span class="line"></span><br><span class="line">ALTER TABLE 原名 RENAME TO 新名;</span><br></pre></td></tr></table></figure>
+
+<p>在此之前先新建一张表 <code>CREATE TABLE table_1(id int(10),name char(20));</code></p>
+<p><img src="/2023/01/11/Mysql/21.png"></p>
+<p>使用命令将table_1的名字修改为table_2 <code>RENAME TABLE table_1 TO table_2;</code></p>
+<p><img src="/2023/01/11/Mysql/22.png"></p>
+<h4 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h4><p>删除表的语句和删除数据库的语句大致相同 <code>DROP TABLE 表名;</code></p>
+<p><img src="/2023/01/11/Mysql/23.png"></p>
+<h3 id="对一列的修改（即对表结构的修改）"><a href="#对一列的修改（即对表结构的修改）" class="headerlink" title="对一列的修改（即对表结构的修改）"></a>对一列的修改（即对表结构的修改）</h3><h4 id="新增一列"><a href="#新增一列" class="headerlink" title="新增一列"></a>新增一列</h4><p>再表中增加一列的语句格式为:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 ADD COLUMN 列名 数据类型 约束;</span><br><span class="line"></span><br><span class="line">或：</span><br><span class="line"></span><br><span class="line">ALTER TABLE 表名 ADD 列名 数据类型 约束;</span><br></pre></td></tr></table></figure>
+
+<p>在原有的表中加入height一列并指定DEFAULT约束为170：</p>
+<p><code>ALTER TABLE lianxi ADD height INT(4) DEFAULT 170;</code></p>
+<p><img src="/2023/01/11/Mysql/24.png"></p>
+<p>新增列默认放置在这张表的最右边。如果要吧增加的列插入在指定位置，则需要再语句的最后使用AFTER关键词</p>
+<p>例如我们要新增一列weight放置在age的后面：</p>
+<p><code>ALTER TABLE lianxi ADD weight INT(4) DEFAULT 120 AFTER age;</code></p>
+<p><img src="/2023/01/11/Mysql/25.png"></p>
+<p>把新增列放在第一列的位置可以使用关键词FIRST关键词</p>
+<p><code>ALTER TABLE lianxi ADD test INT(10) DEFAULT 11 FIRST;</code></p>
+<p><img src="/2023/01/11/Mysql/26.png"></p>
+<h4 id="删除一列"><a href="#删除一列" class="headerlink" title="删除一列"></a>删除一列</h4><p>删除表中的一列和刚才使用的新增一列的语句格式十分相似，只是把关键词ADD改成了DROP，语句后面不需要有数据类型、约束或位置信息。具体格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 DROP COLUMN 列名;</span><br><span class="line"></span><br><span class="line">或：</span><br><span class="line"></span><br><span class="line">ALTER TABLE 表名 DROP 列名；</span><br></pre></td></tr></table></figure>
+
+<p>删除刚才新增的test：</p>
+<p><code>ALTER TABLE lianxi DROP test；</code></p>
+<p><img src="/2023/01/11/Mysql/27.png"></p>
+<h4 id="重命名一列"><a href="#重命名一列" class="headerlink" title="重命名一列"></a>重命名一列</h4><p>这条语句其实不止可以用于重命名一列，准确的来说，它是对一个列做出修改(CHANGE):</p>
+<p><code>ALTER TABLE 表名 CHANGE 原列名 新列名 数据类型 约束;</code></p>
+<blockquote>
+<p>注意：这条重命名语句后面的“数据类型”不能省略，否则重命名失败。</p>
+</blockquote>
+<p>当<strong>原列名</strong>和<strong>新列名</strong>相同的时候，指定新的<strong>数据类型</strong>或<strong>约束</strong>，就可以用于修改数据类型或约束。需要注意的是，修改数据类型可能会导致数据丢失，所以要谨慎使用。</p>
+<p>我们用这条语句将“height”一列重命名为“shengao”，效果如下：</p>
+<p><code>ALTER TABLE lianxi CHANGE height shengao INT(4) DEFAULT 170;</code></p>
+<p><img src="/2023/01/11/Mysql/28.png"></p>
+<h4 id="改变数据类型"><a href="#改变数据类型" class="headerlink" title="改变数据类型"></a>改变数据类型</h4><p>要修改一列的数据类型，除了使用刚才的<strong>CHANGE</strong>语句外，还可以用这样的<strong>MODIFY</strong>语句：</p>
+<p><code>ALTER TABLE 表名 MODIFY 列名 新数据类型；</code></p>
+<p>修改数据类型时需要小心使用，因为这可能会导致数据丢失。</p>
+<h3 id="对表的内容修改"><a href="#对表的内容修改" class="headerlink" title="对表的内容修改"></a>对表的内容修改</h3><h4 id="修改表中某个值"><a href="#修改表中某个值" class="headerlink" title="修改表中某个值"></a>修改表中某个值</h4><p>想要修改表中的某一个或几个数据，这就需要我们用到 <code>UPDATE</code> 这条命令：</p>
+<p><code>UPDATE 表名 SET 列1=值1,列2=值2 WHERE 条件;</code></p>
+<p>比如我们要把Tom的age改成21，shengao改成180:</p>
+<p><img src="/2023/01/11/Mysql/29.png"></p>
+<h4 id="删除一行记录"><a href="#删除一行记录" class="headerlink" title="删除一行记录"></a>删除一行记录</h4><p>删除表中的一行数据，也必须加上WHERE条件，否则整列的数据都会被删除。</p>
+<p><code>DELETE FROM 表名 WHERE 条件;</code></p>
+<p>把表中Tom的数据删除:</p>
+<p><code>DELETE FROM lianxi WHERE name=&#39;Tom&#39;;</code></p>
+<p><img src="/2023/01/11/Mysql/30.png"></p>
 
       
     </div>
